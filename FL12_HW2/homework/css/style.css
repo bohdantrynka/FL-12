@@ -263,7 +263,7 @@ nav{
       border: 1px solid lightskyblue;
   }
   #contact_message:focus{
-    background-color: none;
+    background: none;
 }
   .form-control:focus{
       background-color: lightskyblue;
