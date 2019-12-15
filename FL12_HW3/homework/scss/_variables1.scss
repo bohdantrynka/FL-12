@@ -1,0 +1,39 @@
+$contentBg: #fff;
+$awesomeBg: #0ca1c8;
+$banner-gradient-color: rgb(104,153,0);
+$banner-gradient: linear-gradient(45deg, rgba(104,153,0,1) 0%, rgba(39,90,221,1) 100%);
+$footerBg: #1b1e2a;
+$sectionBg: #1b1e2a;
+$text-color: #fff;
+$headerImg: url("../img/m-h-day.jpg");
+$H-Fz: 54px;
+$LittleLogoFz: 8px;
+$Heading-welcome-Fz: 35px;
+$H-p-Fz: 12px;
+$footer-p-Fz: 10px;
+$bunner-heading-text: 25px;
+$H-Ff: 'Hind', sans-serif;
+$H-Ff-p: 'Source Sans Pro', sans-serif;
+$H-color: #282b39;
+$header-btn: #699a00;
+$font-family: (
+    heading: 'Hind', 
+    base: 'Source Sans Pro', 
+    link: 'Source Sans Pro',
+    night-heading: 'Fresca'
+);
+@mixin join-btn {
+    background-color: $header-btn;
+    height: 35px;
+    width: 100px;
+    color: $text-color;
+    border-radius: 4px;
+    border: none;
+};
+@mixin links {
+    font-family: $H-Ff;
+    color: $text-color;
+    font-size: $H-p-Fz;
+    opacity: 0.8;
+    font-weight: 100;
+};

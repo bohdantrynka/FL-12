@@ -1,0 +1,276 @@
+// Write your styles here
+%margins{
+    margin: 0 auto;
+}
+
+@mixin join-btn {
+    background-color: $header-btn;
+    height: 35px;
+    width: 100px;
+    color: $text-color;
+    border-radius: 4px;
+    border: none;
+}
+@mixin links {
+    font-family: $H-Ff;
+    color: $text-color;
+    font-size: $H-p-Fz;
+    opacity: 0.8;
+    font-weight: 100;
+}
+
+
+body{
+    background: $contentBg;
+    margin: 0;
+    padding: 0;
+    header{
+        @extend %margins;
+        background: $headerImg;
+        // background-size: cover;
+        background-size: cover;
+        background-position-y: -200px;
+        background-repeat: no-repeat;
+        border-bottom-right-radius: 50em 17em;
+        height: 550px;
+        .header-wrap{
+            width: 960px;
+            margin-left: 170px;
+            .landing-logo{
+                margin-top: 10px;
+                display: inline-grid;
+                img{
+                    margin-top: 10px;
+                }
+                p{
+                    width: max-content;
+                    grid-column: 2;
+                    display: inline-grid;
+                    padding-left: 10px;
+                    font-family: $H-Ff;
+                    font-weight: 600;
+                    color: $H-color;
+                    span{
+                        font-size: $LittleLogoFz;
+                        text-align: center;
+                        font-family: map-get($font-family , base);
+                    }
+                }
+            }
+            .header_heading{
+                font-size: $H-Fz;
+                width: 480px;
+                font-family: $H-Ff;
+                font-weight: 600;
+                color: $H-color;
+                line-height: 101%;
+                word-spacing: 1px;
+                letter-spacing: 1px;
+                position: relative;
+                z-index: 2;
+                margin-bottom: 10px;
+                margin-top: 45px;
+                
+                    &::after{
+                        content: "";
+                        background-color: $awesomeBg;
+                        // top: 0;
+                        left: 0;
+                        height: 46px;
+                        width: 235px;
+                        opacity: 0.7;
+                        z-index: -1;
+                        position: absolute;
+                    }
+            }
+            .header_text{
+                width: 650px;
+                font-family: $H-Ff-p;
+                font-size: $H-p-Fz;
+                color: $H-color;
+                white-space: pre-line;
+                margin-top: 0;
+            }
+            div{
+                margin-top: 65px;
+                .header_button{
+                    @include join-btn;
+                }
+                .login{
+                    @include links;
+                    margin-left: 110px;
+                }
+            }
+        }
+    }
+}
+main{
+    margin: 0 auto;
+    width: 960px;
+    display: grid;
+    .section{
+        display: block;
+    }
+    .section_text{
+            text-align: center;
+            font-size: $Heading-welcome-Fz;
+            position: relative;
+            color: $H-color;
+            z-index: 2;
+            font-family: $H-Ff-p;
+            font-weight: 600;
+            
+            &::after{
+                content: "";
+                background-color: $awesomeBg;
+                // top: 0;
+                left: 490px;
+                height: 46px;
+                width: 155px;
+                opacity: 0.7;
+                z-index: -1;
+                position: absolute;
+            }
+    }
+    .section_card_wrap{
+        display: grid;
+        justify-content: center;
+        .section_card{
+            display: grid;
+            width: 800px;
+            margin-bottom: 20px;
+            background-color: $sectionBg;
+            border-radius: 5px;
+            height: 225px;
+            padding:15px ;
+            .section_card_img{
+                width: 340px;
+            }
+            .section_card_right_container{
+                grid-column: 2;
+                color: $text-color;
+                text-align: center;
+                width: 450px;
+                .section_card_heading{
+                    font-family: $H-Ff-p;
+                    font-weight: 600;
+                    margin-bottom: 30px;
+                    margin-top: 40px;
+                    font-family: $H-Ff;
+                    font-weight: 400;
+                }
+                .section_card_text{
+                    opacity: 0.8;
+                    font-family: $H-Ff;
+                    font-size: $H-p-Fz;
+                    width: 330px;
+                    text-align: justify;
+                    margin-left: 60px;
+                    margin-bottom: 20px;
+                }
+                .section_link{
+                    @include links;
+                }
+            }
+        }
+    }
+    .section_banner{
+        background: $banner-gradient-color;
+        background: $banner-gradient;
+        margin-bottom: -50px;
+        margin-top: 50px;
+        height: 130px;
+        display: inline-grid;
+        justify-content: space-around;
+        .section_banner_text_wrap{
+            display: inline-grid;
+            .section_banner_heading{
+                font-size: $bunner-heading-text;
+                margin-bottom: 0;
+                color: $H-color;
+                font-family: $H-Ff;
+                font-weight: 600;
+                position: relative;
+                z-index: 2;
+                
+                &::after{
+                    content: "";
+                    background-color: $awesomeBg;
+                    left: 103px;
+                    height: 35px;
+                    width: 55px;
+                    opacity: 0.7;
+                    z-index: -1;
+                    position: absolute;
+                }
+            }
+            .section_banner_text{
+                font-size: $H-p-Fz;
+                margin-top: 0;
+                color: $text-color;
+                font-family: $H-Ff-p;
+                margin-bottom: 45px;
+            }
+        }
+        .section_banner_button{
+            @include join-btn;
+            display: grid;
+            grid-column: 2;
+            margin-top: 45px;
+        }
+    }
+    
+}
+footer{
+    display: grid;
+    text-align: center;
+    background: $footerBg;
+    height: 170px;
+    .footer-wrap{
+        display: grid;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 40px;
+        .footer_logo{
+            display: inline-grid;
+            img{
+                margin-top: 10px;
+                opacity: 0.8;
+            }
+            p{
+                width: max-content;
+                display: inline-grid;
+                padding-left: 10px;
+                grid-column: 2;
+                color: $text-color;
+                font-family: $H-Ff-p;
+                opacity: 0.8;
+                span{
+                    font-size: $LittleLogoFz;
+                    font-family: $H-Ff;
+                    opacity: 0.8;
+                }
+            }
+        }
+        .footer_text{
+            width: 200px;
+            grid-column: 2;
+            display: inline-grid;
+            color: $text-color;
+            font-family: $H-Ff;
+            font-size: $footer-p-Fz;
+            text-align: left;
+            margin-bottom: 0;
+            margin-left: 60px;
+            opacity: 0.8;
+        }
+        .footer-cr{
+            grid-column: 3;
+            color: $text-color;
+            font-size: $footer-p-Fz;
+            font-family: map-get($font-family , heading );
+            opacity: 0.8;
+        }
+    }
+
+}
