@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin-left: 26.4vw;
+    margin-right: 26.4vw;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 38px 20%;
+    background-color: #ffffff;
+    position: static;
+    height: 95px;
+}
+.logo{
+    text-transform: uppercase;
+    color: #777;
+}
+.nav_link{
+    list-style: none;
+    
+
+}
+.nav_link li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.nav_link li a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #777;
+}
+.nav_link li a:hover{
+    color: #bfba55;
+}
+ .first--section{
+    height: 100vh;   
+    background: url("../img/home-bg.jpg");
+    background-size: cover;
+    background-color: rgba(0,0,0,.7);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+}
+.main-text{
+    text-align: center;
+    padding-top: 43vh;
+}
+.main-text h2{
+    color: #fff;
+    font-size: 72px;
+    margin-bottom: 20px;
+}
+.main-text p{
+    color: #bfba55;
+    margin-bottom: 50px;
+}
+.btn{
+    border-radius: 50px;
+    height: 40px;
+    width: 155px;
+    border: 1px solid #000;
+    background-color: #fff;
+    font-size: 12px;
+}
+.blog-head{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+}
+.blog-head img{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.blog-text h1, h2, h3, h4, h5, h6{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.author img{
+    width: 55px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+.user{
+    margin-right: 20px;
+}
+.post-text{
+    margin-top: 20px;
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 40px;
+}
+hr{
+    margin: 70px 0;
+}
+
+footer{
+    background-color: #000;
+    color: #ffffff;
+    /* height: 355px; */
+    height: 38vh;
+    margin-top: 100px;
+    background-position: bottom;
+    position: static;
+}
+.footer-text{
+    display: grid;
+    grid-gap: 10%;
+    padding-top: 10%;
+    line-height: 30px;
+}
+.discription{
+    grid-column: 1;
+}
+.contact{
+    grid-column: 2;
+}
+.footer-text-heading{
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+.footer__text{
+    font-size: 18px;
+    color: #777;
+}
+.spec-text{
+    line-height: 40px;
+}
+.special-height{
+    margin-top: 20px;
+}
